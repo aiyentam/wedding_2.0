@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
-import Venue from "../../components/Venue/Venue";
+import Venue from "../../../components/Details/Venue/Venue";
 
 const styles = {
   venueContainer: {}

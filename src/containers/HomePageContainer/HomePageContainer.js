@@ -4,7 +4,7 @@ import HomePage from "../../components/HomePage/HomePage";
 
 const styles = theme => ({
   homePageContainer: {
-    height: "92vh",
+    height: "88vh",
     width: "100%",
     display: "flex",
     flexDirection: "row",
@@ -25,11 +25,11 @@ class HomePageContainer extends Component {
     };
   }
 
-  incrementPhoto = (photo) => {
-   this.setState({
-     photos: photo + 1
-   })
-  }
+  incrementPhoto = photo => {
+    this.setState({
+      photos: photo + 1
+    });
+  };
 
   componentDidMount = () => {
     this.interval = setInterval(() => {
@@ -104,7 +104,7 @@ class HomePageContainer extends Component {
       autoplay: true
     };
     const { classes } = this.props;
-    const {photos} = this.state;
+    const { photos } = this.state;
     return (
       <div className={classes.homePageContainer}>
         <HomePage

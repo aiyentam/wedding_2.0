@@ -2,13 +2,12 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 import Slider from "react-slick";
 import "./HomePage.css";
-import photoOne from '../../images/WeddingCollage/1.png';
-import photoTwo from '../../images/WeddingCollage/2.png';
+import photoOne from "../../images/WeddingCollage/1.png";
+import photoTwo from "../../images/WeddingCollage/2.png";
 
 const styles = theme => ({
   homePageWrapper: {},
   headerContainer: {
-    fontFamily: "Alex Brush",
     color: theme.palette.primary.main,
     width: "100%",
     justifyContent: "center",
@@ -17,11 +16,23 @@ const styles = theme => ({
   header: {
     fontFamily: "Alex Brush",
     color: theme.palette.primary.main,
-    fontSize: 45,
-    marginBottom: 0
+    fontSize: 55,
+    marginBottom: 0,
+    fontWeight: "normal"
+  },
+  headerText: {
+    fontSize: 40,
+    marginBottom: 0,
+    fontWeight: "normal"
   },
   subHeader: {
-    marginTop: 0
+    display: "inline-flex"
+  },
+  subHeaderText: {
+    marginTop: 0,
+    padding: "0 10px",
+    fontWeight: "normal",
+    fontSize: 20
   },
   imageContainer: {
     width: 560,
@@ -32,7 +43,6 @@ const styles = theme => ({
     width: 556,
     justifyContent: "space-evenly",
     textAlign: "center",
-    marginTop: 30,
     background: theme.palette.primary.main,
     color: theme.palette.primary.light,
     border: `2px solid ${theme.palette.primary.dark}`
@@ -60,7 +70,11 @@ class HomePage extends Component {
       <div className={classes.homePageWrapper}>
         <div className={classes.headerContainer}>
           <h1 className={classes.header}>Ai Yen and Stephen</h1>
-          <h1 className={classes.subHeader}>June 30th 2019</h1>
+          <div className={classes.subHeader}>
+            <h1 className={classes.subHeaderText}>June</h1>
+            <h1 className={classes.subHeaderText}>30th,</h1>
+            <h1 className={classes.subHeaderText}>2019</h1>
+          </div>
         </div>
         <Slider {...settings} className={classes.imageContainer}>
           <div>
@@ -70,6 +84,10 @@ class HomePage extends Component {
             <img src={photoTwo} alt="photo1" />
           </div>
         </Slider>
+        <div className={classes.headerContainer}>
+          <h1 className={classes.header}>Vancouver Aquarium</h1>
+          <p className={classes.subHeaderText}>Vancouver, Canada</p>
+        </div>
         <div className={classes.countDownTimer}>
           <span className={classes.countDown}>
             <h1>{addLeadingZeros(countDownTimer.days)}</h1>

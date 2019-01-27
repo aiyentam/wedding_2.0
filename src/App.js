@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import { withStyles, List, ListItem } from "@material-ui/core";
 import HomePageContainer from "./containers/HomePageContainer/HomePageContainer";
-import VenueContainer from "./containers/VenueContainer/VenueContainer";
-
+import VenueContainer from "./containers/DetailsContainer/VenueContainer/VenueContainer";
 const styles = theme => ({
   mainContainer: {},
   navContainer: {},
