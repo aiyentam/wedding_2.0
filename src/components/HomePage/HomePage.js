@@ -1,51 +1,61 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core";
-import Slider from "react-slick";
-import "./HomePage.css";
-import photoOne from "../../images/WeddingCollage/1.png";
-import photoTwo from "../../images/WeddingCollage/2.png";
+import { Link } from "react-router-dom";
+import { withStyles, List, ListItem } from "@material-ui/core";
 
 const styles = theme => ({
-  homePageWrapper: {},
-  headerContainer: {
-    color: theme.palette.primary.main,
-    width: "100%",
-    justifyContent: "center",
-    textAlign: "center"
-  },
+  headerContainer: {},
   header: {
     fontFamily: "Alex Brush",
-    color: theme.palette.primary.main,
-    fontSize: 55,
-    marginBottom: 0,
-    fontWeight: "normal"
+    color: theme.palette.secondary.dark,
+    fontSize: 70,
+    margin: "40px 0 0 0"
   },
   headerText: {
     fontSize: 40,
-    marginBottom: 0,
-    fontWeight: "normal"
-  },
-  subHeader: {
-    display: "inline-flex"
+    marginBottom: 0
   },
   subHeaderText: {
-    marginTop: 0,
+    textTransform: "uppercase",
+    margin: 0,
     padding: "0 10px",
-    fontWeight: "normal",
-    fontSize: 20
+    fontSize: 24,
+    fontWeight: "normal"
   },
-  imageContainer: {
-    width: 560,
-    height: 375
+  headerNavContainer: {
+    display: "flex",
+    flexDirection: "column",
+    height: "100%",
+    justifyContent: "space-between",
+    marginLeft: 35
+  },
+  navContainer: {
+    marginBottom: 150,
+    width: 260
+  },
+  nav: {
+    fontFamily: "Alex Brush",
+    fontSize: 35
+  },
+  navItem: {
+    padding: 5,
+    "&:hover": {
+      backgroundColor: "rgba(255, 255, 255, 0.1)",
+      width: "100%",
+      borderRadius: 5
+    }
+  },
+  navLink: {
+    textDecoration: "none",
+    color: theme.palette.secondary.main,
+    paddingTop: 5
   },
   countDownTimer: {
-    display: "inline-flex",
-    width: 556,
+    display: "flex",
     justifyContent: "space-evenly",
     textAlign: "center",
-    background: theme.palette.primary.main,
-    color: theme.palette.primary.light,
-    border: `2px solid ${theme.palette.primary.dark}`
+    color: theme.palette.grey[900],
+    backgroundColor: "rgba(255,255,255,0.5)",
+    width: 354
   },
   countDown: {
     marginBottom: 25
@@ -54,39 +64,14 @@ const styles = theme => ({
 
 class HomePage extends Component {
   render() {
-    const {
-      classes,
-      play,
-      countDownTimer,
-      stop,
-      addLeadingZeros,
-      photos,
-      incrementPhoto,
-      ...settings
-    } = this.props;
-
-    // const photoImage = '../../images/WeddingCollage/' + photos + '.png'
+    const { classes, countDownTimer, addLeadingZeros } = this.props;
     return (
-      <div className={classes.homePageWrapper}>
+      <div className={classes.headerNavContainer}>
         <div className={classes.headerContainer}>
           <h1 className={classes.header}>Ai Yen and Stephen</h1>
-          <div className={classes.subHeader}>
-            <h1 className={classes.subHeaderText}>June</h1>
-            <h1 className={classes.subHeaderText}>30th,</h1>
-            <h1 className={classes.subHeaderText}>2019</h1>
-          </div>
-        </div>
-        <Slider {...settings} className={classes.imageContainer}>
-          <div>
-            <img src={photoOne} alt="photo1" />
-          </div>
-          <div>
-            <img src={photoTwo} alt="photo1" />
-          </div>
-        </Slider>
-        <div className={classes.headerContainer}>
-          <h1 className={classes.header}>Vancouver Aquarium</h1>
-          <p className={classes.subHeaderText}>Vancouver, Canada</p>
+          <h1 className={classes.subHeaderText}>
+            June 30th, 2019 · Vancouver Aquarium
+          </h1>
         </div>
         <div className={classes.countDownTimer}>
           <span className={classes.countDown}>
@@ -105,6 +90,30 @@ class HomePage extends Component {
             <h1>{addLeadingZeros(countDownTimer.sec)}</h1>
             <span>Seconds</span>
           </span>
+        </div>
+        <div className={classes.navContainer}>
+          <List className={classes.nav}>
+            <ListItem className={classes.navItem}>
+              <Link className={classes.navLink} to="/">
+                Home
+              </Link>
+            </ListItem>
+            <ListItem className={classes.navItem}>
+              <Link className={classes.navLink} to="/details/">
+                Details
+              </Link>
+            </ListItem>
+            <ListItem className={classes.navItem}>
+              <Link className={classes.navLink} to="/registry/">
+                Honeymoon Fund
+              </Link>
+            </ListItem>
+            <ListItem className={classes.navItem}>
+              <Link className={classes.navLink} to="/contactus/">
+                Contact
+              </Link>
+            </ListItem>
+          </List>
         </div>
       </div>
     );

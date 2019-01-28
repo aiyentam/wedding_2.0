@@ -1,15 +1,19 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 import HomePage from "../../components/HomePage/HomePage";
+import wallOne from "../../images/WallPaper/Wall01.png";
 
 const styles = theme => ({
   homePageContainer: {
-    height: "88vh",
+    color: theme.palette.secondary.dark,
     width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center"
+    background: `url(${wallOne})`,
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    height: "100vh",
+    width: "100vw",
+    opacity: 0.8
   }
 });
 
@@ -20,16 +24,9 @@ class HomePageContainer extends Component {
       days: 0,
       hours: 0,
       min: 0,
-      sec: 0,
-      photos: 0
+      sec: 0
     };
   }
-
-  incrementPhoto = photo => {
-    this.setState({
-      photos: photo + 1
-    });
-  };
 
   componentDidMount = () => {
     this.interval = setInterval(() => {
@@ -43,10 +40,6 @@ class HomePageContainer extends Component {
       date ? this.setState(date) : this.stop();
     }, 1000);
   };
-
-  componentWillUnmount() {
-    this.stop();
-  }
 
   calculateCountdown(endDate) {
     let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
@@ -81,10 +74,6 @@ class HomePageContainer extends Component {
     return timeLeft;
   }
 
-  stop = () => {
-    clearInterval(this.interval);
-  };
-
   addLeadingZeros(value) {
     value = String(value);
     while (value.length < 2) {
@@ -95,26 +84,12 @@ class HomePageContainer extends Component {
 
   render() {
     const countDownTimer = this.state;
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      autoplay: true
-    };
     const { classes } = this.props;
-    const { photos } = this.state;
     return (
       <div className={classes.homePageContainer}>
         <HomePage
-          {...settings}
-          play={this.play}
           countDownTimer={countDownTimer}
-          stop={this.stop}
           addLeadingZeros={this.addLeadingZeros}
-          incrementPhoto={this.incrementPhoto}
-          photos={photos}
         />
       </div>
     );
