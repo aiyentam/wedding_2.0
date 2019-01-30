@@ -6,12 +6,15 @@ import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "./styles/theme";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
-    <Router>
-      <App />
-    </Router>
+    <ParallaxProvider>
+      <Router>
+        <App />
+      </Router>
+    </ParallaxProvider>
   </MuiThemeProvider>,
   document.getElementById("root")
 );

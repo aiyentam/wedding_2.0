@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
-import Hotel from "../../components/Hotel/Hotel";
+import Hotel from "../../../components/Details/Hotel/Hotel";
 
-const styles = {
+const styles = theme => ({
   hotelContainer: {
     backgroundcolor: theme.palette.primary.light
   }
-};
+});
 
 class HotelContainer extends Component {
   render() {

@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 
 const styles = {
-  hotelWrapper: {}
+  hotelWrapper: {
+    fontFamily: "Alex Brush",
+    marginBottom: 0,
+    textAlign: "center"
+  }
 };
 
 class Hotel extends Component {
@@ -10,7 +14,7 @@ class Hotel extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.hotelWrapper}>
-        <div className={classes.carosel} />
+        <h1>Hotels</h1>
       </div>
     );
   }
