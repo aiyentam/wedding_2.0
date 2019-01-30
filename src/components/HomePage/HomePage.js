@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { withStyles, List, ListItem } from "@material-ui/core";
+import { withStyles, Button } from "@material-ui/core";
 
 const styles = theme => ({
   headerContainer: {},
@@ -30,24 +29,16 @@ const styles = theme => ({
   },
   navContainer: {
     marginBottom: 150,
-    width: 260
-  },
-  nav: {
-    fontFamily: "Alex Brush",
-    fontSize: 35
-  },
-  navItem: {
-    padding: 5,
-    "&:hover": {
-      backgroundColor: "rgba(255, 255, 255, 0.1)",
-      width: "100%",
-      borderRadius: 5
-    }
+    width: 260,
+    display: "inline-flex",
+    flexDirection: "column"
   },
   navLink: {
     textDecoration: "none",
     color: theme.palette.secondary.main,
-    paddingTop: 5
+    paddingTop: 5,
+    alignSelf: "flex-start",
+    fontSize: 15
   },
   countDownTimer: {
     display: "flex",
@@ -92,28 +83,10 @@ class HomePage extends Component {
           </span>
         </div>
         <div className={classes.navContainer}>
-          <List className={classes.nav}>
-            <ListItem className={classes.navItem}>
-              <Link className={classes.navLink} to="/">
-                Home
-              </Link>
-            </ListItem>
-            <ListItem className={classes.navItem}>
-              <Link className={classes.navLink} to="/details/">
-                Details
-              </Link>
-            </ListItem>
-            <ListItem className={classes.navItem}>
-              <Link className={classes.navLink} to="/registry/">
-                Honeymoon Fund
-              </Link>
-            </ListItem>
-            <ListItem className={classes.navItem}>
-              <Link className={classes.navLink} to="/contactus/">
-                Contact
-              </Link>
-            </ListItem>
-          </List>
+          <Button className={classes.navLink}>Home</Button>
+          <Button className={classes.navLink}>Details</Button>
+          <Button className={classes.navLink}>Honeymoon Fund</Button>
+          <Button className={classes.navLink}>Contact</Button>
         </div>
       </div>
     );

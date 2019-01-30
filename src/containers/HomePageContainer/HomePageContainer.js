@@ -6,7 +6,6 @@ import wallOne from "../../images/WallPaper/Wall01.png";
 const styles = theme => ({
   homePageContainer: {
     color: theme.palette.secondary.dark,
-    width: "100%",
     background: `url(${wallOne})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -24,7 +23,11 @@ class HomePageContainer extends Component {
       days: 0,
       hours: 0,
       min: 0,
-      sec: 0
+      sec: 0,
+      home: false,
+      details: false,
+      honeymood: false,
+      contact: false
     };
   }
 

@@ -6,6 +6,9 @@ const styles = {
     fontFamily: "Alex Brush",
     marginBottom: 0,
     textAlign: "center"
+  },
+  textHeader: {
+    fontSize: 40
   }
 };
 
@@ -14,7 +17,7 @@ class Hotel extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.hotelWrapper}>
-        <h1>Hotels</h1>
+        <h1 className={classes.textHeader}>Hotels</h1>
       </div>
     );
   }

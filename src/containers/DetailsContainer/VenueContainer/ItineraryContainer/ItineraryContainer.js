@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 import Itinerary from "../../../../components/Details/Venue/Itinerary/Itinerary";
 
-const styles = theme => ({});
+const styles = theme => ({
+  itineraryWrapper: {
+    width: "100%"
+  }
+});
 
 class ItineraryContainer extends Component {
   constructor(props) {
@@ -13,7 +17,7 @@ class ItineraryContainer extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.itineraryContainer}>
+      <div className={classes.itineraryWrapper}>
         <Itinerary />
       </div>
     );

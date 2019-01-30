@@ -17,9 +17,15 @@ const styles = theme => ({
   },
   componentWrapper: {
     fontSize: 40,
-    marginLeft: 35,
-    marginRight: 35,
-    height: "100%"
+    height: "87%",
+    background: theme.palette.primary.light,
+    margin: 45,
+    opacity: 0.8,
+    border: `15px solid ${theme.palette.secondary.main}`,
+    display: "inline-flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "-webkit-fill-available"
   }
 });
 

@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter as Router } from "react-router-dom";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "./styles/theme";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -11,9 +10,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 ReactDOM.render(
   <MuiThemeProvider theme={theme}>
     <ParallaxProvider>
-      <Router>
-        <App />
-      </Router>
+      <App />
     </ParallaxProvider>
   </MuiThemeProvider>,
   document.getElementById("root")

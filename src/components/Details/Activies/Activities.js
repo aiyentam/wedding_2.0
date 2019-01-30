@@ -27,8 +27,10 @@ class Activites extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.activityWrapper}>
-        <div className={classes.text}>
-          <h1>Activities</h1>
+        <div>
+          <div className={classes.text}>
+            <h1>Activities</h1>
+          </div>
         </div>
       </div>
     );

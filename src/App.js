@@ -4,6 +4,8 @@ import { Parallax } from "react-scroll-parallax";
 import HomePageContainer from "./containers/HomePageContainer/HomePageContainer";
 import DetailContainer from "./containers/DetailsContainer/DetailContainer";
 import ActivitiesContainer from "./containers/DetailsContainer/ActivitiesContainer/ActivitiesContainer";
+import RegistryContainer from "./containers/RegistryContainer/RegistryContainer";
+import ContactContainer from "./containers/ContactContainer/ContactContainer";
 
 const styles = theme => ({
   mainContainer: {
@@ -38,15 +40,9 @@ class App extends Component {
           <HomePageContainer />
           <DetailContainer />
           <ActivitiesContainer />
+          <RegistryContainer />
+          <ContactContainer />
         </div>
-        {/* <Route exact path="/" component={HomePageContainer} />
-        <Route path="/details" component={DetailContainer} /> */}
-        {/* <Route path="/hotel/" component={HotelContainer} />
-        <Route path="/sightsee/" component={SightseeContainer} />
-        <Route path="/itinerary/" component={ItineraryContainer} />
-        <Route path="/menu/" component={FoodContainer} />
-        <Route path="/registry/" component={RegistryContainer} />
-        <Route path="/contantus/" component={ContactContainer} /> */}
       </Parallax>
     );
   }
