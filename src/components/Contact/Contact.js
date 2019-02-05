@@ -12,8 +12,17 @@ const styles = theme => ({
   },
   text: {
     fontSize: 40,
-    fontFamily: "Alex Brush",
     marginBottom: 0
+  },
+  headerText: {
+    margin: 0,
+    fontFamily: "Alex Brush"
+  },
+  subText: {
+    fontSize: 25,
+    margin: 0,
+    fontWeight: "normal",
+    textShadow: "1px 1px black"
   }
 });
 
@@ -28,7 +37,10 @@ class Contact extends Component {
     return (
       <div className={classes.contactWrapper}>
         <div className={classes.text}>
-          <h1>Need to Reach Us?</h1>
+          <h1 className={classes.headerText}>Need to Reach Us?</h1>
+          <h2 className={classes.subText}>
+            tam.aiyen@gmail.com | wu.stephend@gmail.com
+          </h2>
         </div>
       </div>
     );

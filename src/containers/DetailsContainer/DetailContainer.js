@@ -38,7 +38,7 @@ class DetailContainer extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.detailContainer}>
+      <div id="detailsContainer" className={classes.detailContainer}>
         <div className={classes.componentWrapper}>
           <VenueContainer />
           <ItineraryContainer />

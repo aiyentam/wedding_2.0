@@ -38,7 +38,7 @@ const styles = theme => ({
     color: theme.palette.secondary.main,
     paddingTop: 5,
     alignSelf: "flex-start",
-    fontSize: 15
+    fontSize: 18
   },
   countDownTimer: {
     display: "flex",
@@ -54,6 +54,15 @@ const styles = theme => ({
 });
 
 class HomePage extends Component {
+  scrollPage = divName => {
+    const element = document.getElementById(divName);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  };
+
   render() {
     const { classes, countDownTimer, addLeadingZeros } = this.props;
     return (
@@ -83,10 +92,38 @@ class HomePage extends Component {
           </span>
         </div>
         <div className={classes.navContainer}>
-          <Button className={classes.navLink}>Home</Button>
-          <Button className={classes.navLink}>Details</Button>
-          <Button className={classes.navLink}>Honeymoon Fund</Button>
-          <Button className={classes.navLink}>Contact</Button>
+          <Button
+            onClick={() => {
+              this.scrollPage("detailsContainer");
+            }}
+            className={classes.navLink}
+          >
+            Details
+          </Button>
+          <Button
+            className={classes.navLink}
+            onClick={() => {
+              this.scrollPage("activitiesContainer");
+            }}
+          >
+            Activities
+          </Button>
+          <Button
+            className={classes.navLink}
+            onClick={() => {
+              this.scrollPage("honeyMoonContainer");
+            }}
+          >
+            Honeymoon Fund
+          </Button>
+          <Button
+            className={classes.navLink}
+            onClick={() => {
+              this.scrollPage("contactContainer");
+            }}
+          >
+            Contact
+          </Button>
         </div>
       </div>
     );

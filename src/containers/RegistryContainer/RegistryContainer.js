@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.registryContainer}>
+      <div id="honeyMoonContainer" className={classes.registryContainer}>
         <Registry />
       </div>
     );

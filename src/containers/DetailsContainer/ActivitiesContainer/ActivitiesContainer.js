@@ -24,7 +24,7 @@ class ActivitiesContainer extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.activitiesContainer}>
+      <div id="activitiesContainer" className={classes.activitiesContainer}>
         <Activities />
       </div>
     );

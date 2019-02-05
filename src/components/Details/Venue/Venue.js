@@ -35,7 +35,9 @@ const styles = theme => ({
   bride: {
     paddingLeft: 3
   },
-  groom: { paddingLeft: 3 },
+  groom: {
+    paddingLeft: 3
+  },
   subTextBody: {
     fontSize: 18,
     borderBottom: "2px solid black",
@@ -64,7 +66,6 @@ class Venue extends Component {
             </h2>
             <h2 className={classes.headerSubText}>Bridesmaid - Carmen Chen</h2>
             <h2 className={classes.headerSubText}>
-              {" "}
               Bridesmaid - Marsha Tiaranai
             </h2>
             <h2 className={classes.headerSubText}>Bridesmaid - Sonnya Yoo</h2>

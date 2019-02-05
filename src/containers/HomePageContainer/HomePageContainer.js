@@ -12,7 +12,8 @@ const styles = theme => ({
     backgroundSize: "cover",
     height: "100vh",
     width: "100vw",
-    opacity: 0.8
+    opacity: 0.8,
+    isTop: true
   }
 });
 
