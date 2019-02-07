@@ -37,6 +37,8 @@ const styles = {
   }
 };
 
+// https://www.marriott.com/hotels/travel/yvrbr-metropolitan-hotel-vancouver/
+
 class Hotel extends Component {
   render() {
     const { classes } = this.props;
