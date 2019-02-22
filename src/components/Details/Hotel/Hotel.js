@@ -9,7 +9,8 @@ const styles = {
   textHeader: {
     fontSize: 40,
     textAlign: "center",
-    fontFamily: "Alex Brush"
+    fontFamily: "Alex Brush",
+    marginBottom: 0
   },
   textSubHeader: {
     fontSize: 15
@@ -48,27 +49,35 @@ class Hotel extends Component {
         <div className={classes.textBody}>
           <div className={classes.title}>
             <p style={{ marginTop: 0, marginBottom: 0 }}>
-              Metropolitian Hotel Vancouver
+              YWCA Hotel Vancouver
             </p>
-            <h1
-              className={classes.textHeader}
-              style={{ marginTop: 0, marginBottom: 0 }}
-            >
-              Marriott
+            <h1 className={classes.textSubHeader}>
+              733 Beatty Street, V6B 2M4 Vancouver, Canada
             </h1>
           </div>
-          <h1 className={classes.textSubHeader}>06/29/2019 - 07/01/2019</h1>
+          <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
           <p className={classes.subParagraph}>
-            *before June 1, 2019 for these rates*
+            *cancellation 48hrs prior to booking*
           </p>
           <p className={classes.subParagraph}>
-            **please note, this is the weekend of Canada Day**
+            **please note, there is ongoing construction**
           </p>
           <div className={classes.textBody}>
-            <h2 className={classes.headerSubText}>Luxury King - $429.00 CAD</h2>
             <h2 className={classes.headerSubText}>
-              Junior Suite - $529.00 CAD
+              One double bed w/ private bath $199 CAD/per night
             </h2>
+            <h2 className={classes.headerSubText}>
+              Two double bed w/ private bath $215 CAD/per night
+            </h2>
+            <h1 className={classes.textSubHeader}>
+              For more infomation and/or reserve a room please contact:
+            </h1>
+            <h1 className={classes.textSubHeader}>
+              Karen Newell | knewell@ywcavan.org | (604) 895 - 5840
+            </h1>
+            <h1 className={classes.textSubHeader}>
+              Mention "Tam/Wu Wedding" for those rates
+            </h1>
           </div>
         </div>
       </div>

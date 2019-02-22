@@ -18,7 +18,7 @@ const styles = theme => ({
     margin: 0,
     padding: "0 10px",
     fontSize: 24,
-    fontWeight: "normal"
+    fontWeight: 500
   },
   headerNavContainer: {
     display: "flex",
@@ -29,23 +29,39 @@ const styles = theme => ({
   },
   navContainer: {
     marginBottom: 150,
-    width: 260,
+    width: 300,
     display: "inline-flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    borderTop: "3px solid #9D7057",
+    borderBottom: "3px solid #9D7057",
+    padding: "20px 0"
+  },
+  navTitle: {
+    fontFamily: "Alex Brush",
+    color: "#9D7057",
+    fontSize: 45,
+    margin: 0,
+    letterSpacing: 13
   },
   navLink: {
     textDecoration: "none",
-    color: theme.palette.secondary.main,
+    color: "#9D7057",
     paddingTop: 5,
     alignSelf: "flex-start",
-    fontSize: 18
+    fontSize: 18,
+    fontWeight: 500,
+    width: "100%",
+    justifyContent: "left",
+    "&:hover": {
+      backgroundColor: "rgba(255,255,255, 0.8)"
+    }
   },
   countDownTimer: {
     display: "flex",
     justifyContent: "space-evenly",
     textAlign: "center",
     color: theme.palette.grey[900],
-    backgroundColor: "rgba(255,255,255,0.5)",
+    backgroundColor: "rgba(237,243,255 ,0.65)",
     width: 354
   },
   countDown: {
@@ -92,6 +108,7 @@ class HomePage extends Component {
           </span>
         </div>
         <div className={classes.navContainer}>
+          <h1 className={classes.navTitle}>Navigation</h1>
           <Button
             onClick={() => {
               this.scrollPage("detailsContainer");

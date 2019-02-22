@@ -4,6 +4,8 @@ import VenueContainer from "./VenueContainer/VenueContainer";
 import wallTwo from "../../images/WallPaper/Wall02.png";
 import ItineraryContainer from "./VenueContainer/ItineraryContainer/ItineraryContainer";
 import HotelContainer from "../../containers/DetailsContainer/HotelContainer/HotelContainer";
+import Slider from "react-slick";
+import "./DetailContainer.css";
 
 const styles = theme => ({
   detailContainer: {
@@ -12,23 +14,19 @@ const styles = theme => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     height: "100vh",
-    width: "100%",
+    width: "100vw",
     opacity: 0.8
   },
   componentWrapper: {
     fontSize: 40,
-    height: "87%",
+    height: "90.7%",
     background: theme.palette.primary.light,
     margin: 45,
     opacity: 0.8,
-    border: `15px solid ${theme.palette.secondary.main}`,
-    display: "inline-flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    width: "-webkit-fill-available"
+    border: `15px solid rgba(212,197,174, 0.8)`,
+    width: "40%"
   }
 });
-
 class DetailContainer extends Component {
   constructor(props) {
     super(props);
@@ -36,14 +34,21 @@ class DetailContainer extends Component {
   }
 
   render() {
+    const settings = {
+      speed: 500,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true
+    };
     const { classes } = this.props;
     return (
       <div id="detailsContainer" className={classes.detailContainer}>
-        <div className={classes.componentWrapper}>
+        <Slider {...settings} className={classes.componentWrapper}>
           <VenueContainer />
-          <ItineraryContainer />
           <HotelContainer />
-        </div>
+          <ItineraryContainer />
+        </Slider>
       </div>
     );
   }
