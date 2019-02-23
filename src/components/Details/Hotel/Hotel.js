@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core";
+import { withStyles, a } from "@material-ui/core";
 
 const styles = {
   hotelWrapper: {
@@ -18,12 +18,16 @@ const styles = {
   title: {
     paddingLeft: 3
   },
+  hotel: {
+    display: "inline-flex",
+    flexDirection: "column"
+  },
   textBody: {
     display: "inline-flex",
     fontSize: 30,
     textAlign: "center",
     flexDirection: "column",
-    marginTop: 25
+    margin: "25px 0"
   },
   headerSubText: {
     fontSize: 18,
@@ -38,46 +42,74 @@ const styles = {
   }
 };
 
-// https://www.marriott.com/hotels/travel/yvrbr-metropolitan-hotel-vancouver/
-
 class Hotel extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, ywca, ramada } = this.props;
+    const ywcaUrl = "https://ywcavan.org/hotel/";
+    const ramadaUrl = "https://www.ramadadowntownvancouver.com/";
     return (
       <div className={classes.hotelWrapper}>
         <h1 className={classes.textHeader}>Hotels</h1>
-        <div className={classes.textBody}>
-          <div className={classes.title}>
-            <p style={{ marginTop: 0, marginBottom: 0 }}>
-              YWCA Hotel Vancouver
-            </p>
-            <h1 className={classes.textSubHeader}>
-              733 Beatty Street, V6B 2M4 Vancouver, Canada
-            </h1>
-          </div>
-          <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
-          <p className={classes.subParagraph}>
-            *cancellation 48hrs prior to booking*
-          </p>
-          <p className={classes.subParagraph}>
-            **please note, there is ongoing construction**
-          </p>
+        <div className={classes.hotel}>
           <div className={classes.textBody}>
-            <h2 className={classes.headerSubText}>
-              One double bed w/ private bath $199 CAD/per night
-            </h2>
-            <h2 className={classes.headerSubText}>
-              Two double bed w/ private bath $215 CAD/per night
-            </h2>
-            <h1 className={classes.textSubHeader}>
-              For more infomation and/or reserve a room please contact:
-            </h1>
-            <h1 className={classes.textSubHeader}>
-              Karen Newell | knewell@ywcavan.org | (604) 895 - 5840
-            </h1>
-            <h1 className={classes.textSubHeader}>
-              Mention "Tam/Wu Wedding" for those rates
-            </h1>
+            <div className={classes.title}>
+              <p style={{ marginTop: 0, marginBottom: 0 }}>
+                <a href={ywcaUrl}>{ywca.name}</a>
+              </p>
+              <h1 className={classes.textSubHeader}>{ywca.address}</h1>
+            </div>
+            <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
+            <p className={classes.subParagraph}>{ywca.info[0]}</p>
+            <p className={classes.subParagraph}>{ywca.info[1]}</p>
+            <div className={classes.textBody}>
+              <h2 className={classes.headerSubText}>{ywca.bed[0]}</h2>
+              <h2 className={classes.headerSubText}>{ywca.bed[1]}</h2>
+            </div>
+            <div>
+              <h1
+                className={classes.textSubHeader}
+                style={{ marginBottom: 0, fontStyle: "italic" }}
+              >
+                For more infomation about other rooms and/or reserve a room
+                please contact:
+              </h1>
+              <h1 className={classes.textSubHeader} style={{ margin: 0 }}>
+                {ywca.contact}
+              </h1>
+              <h1 className={classes.textSubHeader} style={{ marginTop: 0 }}>
+                {ywca.promo}
+              </h1>
+            </div>
+          </div>
+          <div className={classes.textBody}>
+            <div className={classes.title}>
+              <p style={{ marginTop: 0, marginBottom: 0 }}>
+                <a href={ramadaUrl}>{ramada.name}</a>
+              </p>
+              <h1 className={classes.textSubHeader}>{ramada.address}</h1>
+            </div>
+            <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
+            <p className={classes.subParagraph}>{ramada.info[0]}</p>
+            <p className={classes.subParagraph}>{ramada.info[1]}</p>
+            <div className={classes.textBody}>
+              <h2 className={classes.headerSubText}>{ramada.bed[0]}</h2>
+              <h2 className={classes.headerSubText}>{ramada.bed[1]}</h2>
+            </div>
+            <div>
+              <h1
+                className={classes.textSubHeader}
+                style={{ marginBottom: 0, fontStyle: "italic" }}
+              >
+                For more infomation about other rooms and/or reserve a room
+                please contact:
+              </h1>
+              <h1 className={classes.textSubHeader} style={{ margin: 0 }}>
+                {ramada.contact}
+              </h1>
+              <h1 className={classes.textSubHeader} style={{ marginTop: 0 }}>
+                {ramada.promo}
+              </h1>
+            </div>
           </div>
         </div>
       </div>

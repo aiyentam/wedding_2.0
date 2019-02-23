@@ -10,3 +10,12 @@
 .slick-next:before {
   color: black;
 }
+
+.slick-list {
+  height: 100%;
+}
+
+.slick-track {
+  width: "auto";
+  height: 100%;
+}
