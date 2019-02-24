@@ -2,8 +2,15 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 
 const styles = theme => ({
-  itineraryWrapper: {
+  wrapper: {
     marginBottom: 0,
+    textAlign: "center",
+    fontSize: 40
+  },
+  text: {
+    fontFamily: "Alex Brush",
+    margin: 0,
+    paddingTop: 45,
     textAlign: "center",
     fontSize: 40
   },
@@ -48,7 +55,8 @@ class Itinerary extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.itineraryWrapper}>
+      <div className={classes.wrapper}>
+        <h1 className={classes.text}>Wedding Information</h1>
         <h1 className={classes.textHeader}>Itinerary</h1>
         <h1 className={classes.subtextHeader}>(7:00PM ~ 11:59PM)</h1>
         <div className={classes.textBody}>

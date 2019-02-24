@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
-import Itinerary from "../../../../components/Details/Venue/Itinerary/Itinerary";
+import Menu from "../../../components/Details/Menu/Menu";
 
 const styles = theme => ({
-  itineraryWrapper: {
+  menuWrapper: {
     width: "100%",
     height: "100%"
   }
 });
-
-class ItineraryContainer extends Component {
+class MenuContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -18,11 +17,11 @@ class ItineraryContainer extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.itineraryWrapper}>
-        <Itinerary />
+      <div className={classes.menuWrapper}>
+        <Menu />
       </div>
     );
   }
 }
 
-export default withStyles(styles)(ItineraryContainer);
+export default withStyles(styles)(MenuContainer);

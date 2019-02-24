@@ -6,6 +6,7 @@ import ItineraryContainer from "./VenueContainer/ItineraryContainer/ItineraryCon
 import HotelContainer from "../../containers/DetailsContainer/HotelContainer/HotelContainer";
 import Slider from "react-slick";
 import "./DetailContainer.css";
+import MenuContainer from "./MenuContainer/MenuContainer";
 
 const styles = theme => ({
   detailContainer: {
@@ -48,6 +49,7 @@ class DetailContainer extends Component {
           <VenueContainer />
           <HotelContainer />
           <ItineraryContainer />
+          <MenuContainer />
         </Slider>
       </div>
     );

@@ -2,32 +2,38 @@ import React, { Component } from "react";
 import { withStyles, a } from "@material-ui/core";
 
 const styles = {
-  hotelWrapper: {
-    marginBottom: 0,
-    textAlign: "center"
+  wrapper: {
+    textAlign: "center",
+    width: "100%",
+    height: "100%"
   },
   textHeader: {
-    fontSize: 40,
-    textAlign: "center",
     fontFamily: "Alex Brush",
-    marginBottom: 0
+    margin: 0,
+    paddingTop: 45,
+    textAlign: "center",
+    fontSize: 40
+  },
+  subText: {
+    fontFamily: "Alex Brush",
+    marginBottom: 0,
+    fontSize: 40
   },
   textSubHeader: {
     fontSize: 15
   },
-  title: {
-    paddingLeft: 3
-  },
   hotel: {
+    height: "91.5%",
     display: "inline-flex",
     flexDirection: "column"
   },
+  textBodyContainer: {
+    margin: "0px 25px"
+  },
   textBody: {
-    display: "inline-flex",
     fontSize: 30,
-    textAlign: "center",
-    flexDirection: "column",
-    margin: "25px 0"
+
+    margin: "35px 0"
   },
   headerSubText: {
     fontSize: 18,
@@ -48,67 +54,70 @@ class Hotel extends Component {
     const ywcaUrl = "https://ywcavan.org/hotel/";
     const ramadaUrl = "https://www.ramadadowntownvancouver.com/";
     return (
-      <div className={classes.hotelWrapper}>
-        <h1 className={classes.textHeader}>Hotels</h1>
+      <div className={classes.wrapper}>
+        <h1 className={classes.textHeader}>Wedding Information</h1>
         <div className={classes.hotel}>
-          <div className={classes.textBody}>
-            <div className={classes.title}>
-              <p style={{ marginTop: 0, marginBottom: 0 }}>
-                <a href={ywcaUrl}>{ywca.name}</a>
-              </p>
-              <h1 className={classes.textSubHeader}>{ywca.address}</h1>
-            </div>
-            <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
-            <p className={classes.subParagraph}>{ywca.info[0]}</p>
-            <p className={classes.subParagraph}>{ywca.info[1]}</p>
+          <h1 className={classes.subText}>Hotels</h1>
+          <div className={classes.textBodyContainer}>
             <div className={classes.textBody}>
-              <h2 className={classes.headerSubText}>{ywca.bed[0]}</h2>
-              <h2 className={classes.headerSubText}>{ywca.bed[1]}</h2>
+              <div className={classes.title}>
+                <p>
+                  <a href={ywcaUrl}>{ywca.name}</a>
+                </p>
+                <h1 className={classes.textSubHeader}>{ywca.address}</h1>
+              </div>
+              <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
+              <h3 className={classes.subParagraph}>{ywca.info[0]}</h3>
+              <h3 className={classes.subParagraph}>{ywca.info[1]}</h3>
+              <div className={classes.textBody}>
+                <h2 className={classes.headerSubText}>{ywca.bed[0]}</h2>
+                <h2 className={classes.headerSubText}>{ywca.bed[1]}</h2>
+              </div>
+              <div>
+                <h1
+                  className={classes.textSubHeader}
+                  style={{ marginBottom: 0, fontStyle: "italic" }}
+                >
+                  For more infomation about other rooms and/or reserve a room
+                  please contact:
+                </h1>
+                <h1 className={classes.textSubHeader} style={{ margin: 0 }}>
+                  {ywca.contact}
+                </h1>
+                <h1 className={classes.textSubHeader} style={{ marginTop: 0 }}>
+                  {ywca.promo}
+                </h1>
+              </div>
             </div>
-            <div>
-              <h1
-                className={classes.textSubHeader}
-                style={{ marginBottom: 0, fontStyle: "italic" }}
-              >
-                For more infomation about other rooms and/or reserve a room
-                please contact:
-              </h1>
-              <h1 className={classes.textSubHeader} style={{ margin: 0 }}>
-                {ywca.contact}
-              </h1>
-              <h1 className={classes.textSubHeader} style={{ marginTop: 0 }}>
-                {ywca.promo}
-              </h1>
-            </div>
-          </div>
-          <div className={classes.textBody}>
-            <div className={classes.title}>
-              <p style={{ marginTop: 0, marginBottom: 0 }}>
-                <a href={ramadaUrl}>{ramada.name}</a>
-              </p>
-              <h1 className={classes.textSubHeader}>{ramada.address}</h1>
-            </div>
-            <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
-            <p className={classes.subParagraph}>{ramada.info[0]}</p>
-            <p className={classes.subParagraph}>{ramada.info[1]}</p>
             <div className={classes.textBody}>
-              <h2 className={classes.headerSubText}>{ramada.bed[0]}</h2>
-              <h2 className={classes.headerSubText}>{ramada.bed[1]}</h2>
-            </div>
-            <div>
-              <h1
-                className={classes.textSubHeader}
-                style={{ marginBottom: 0, fontStyle: "italic" }}
-              >
-                For more infomation about other rooms and/or reserve a room
-                please contact:
-              </h1>
-              <h1 className={classes.textSubHeader} style={{ margin: 0 }}>
-                {ramada.contact}
-              </h1>
-              <h1 className={classes.textSubHeader} style={{ marginTop: 0 }}>
-                {ramada.promo}
-              </h1>
+              <div className={classes.title}>
+                <p>
+                  <a href={ramadaUrl}>{ramada.name}</a>
+                </p>
+                <h1 className={classes.textSubHeader}>{ramada.address}</h1>
+              </div>
+              <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
+              <h3 className={classes.subParagraph}>{ramada.info[0]}</h3>
+              <h3 className={classes.subParagraph}>{ramada.info[1]}</h3>
+              <div className={classes.textBody}>
+                <h2 className={classes.headerSubText}>{ramada.bed[0]}</h2>
+                <h2 className={classes.headerSubText}>{ramada.bed[1]}</h2>
+              </div>
+              <div>
+                <h1
+                  className={classes.textSubHeader}
+                  style={{ marginBottom: 0, fontStyle: "italic" }}
+                >
+                  For more infomation about other rooms and/or reserve a room
+                  please contact:
+                </h1>
+                <h1 className={classes.textSubHeader} style={{ margin: 0 }}>
+                  {ramada.contact}
+                </h1>
+                <h1 className={classes.textSubHeader} style={{ marginTop: 0 }}>
+                  {ramada.promo}
+                </h1>
+              </div>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/core";
 
 const styles = theme => ({
-  venueWrapper: {
+  wrapper: {
     textAlign: "center",
     width: "100%",
     height: "100%"
@@ -56,7 +56,7 @@ class Venue extends Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.venueWrapper}>
+      <div className={classes.wrapper}>
         <h1 className={classes.text}>Wedding Information</h1>
         <div className={classes.info}>
           <div className={classes.textBody}>
