@@ -29,6 +29,7 @@ const styles = theme => ({
     justifyContent: "flex-end"
   },
   button: {
+    background: "rgba(0,0,0, .05)",
     "&:hover": {
       background: "rgba(255,255,255, .7)"
     }
@@ -58,12 +59,15 @@ class App extends Component {
         <div className={classes.buttonContainer}>
           <Button
             className={classes.button}
-            style={{ padding: 10, color: "#CF9D81" }}
+            style={{
+              padding: 10,
+              color: "#CF9D81"
+            }}
             onClick={() => {
               this.scrollPage("homePageContainer");
             }}
           >
-            <KeyboardArrowUp />
+            <KeyboardArrowUp style={{ width: 30, height: 30 }} />
           </Button>
         </div>
         <Parallax
