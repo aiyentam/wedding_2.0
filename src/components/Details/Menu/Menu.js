@@ -7,13 +7,6 @@ const styles = {
     width: "100%",
     height: "100%"
   },
-  text: {
-    fontFamily: "Alex Brush",
-    margin: 0,
-    paddingTop: 45,
-    textAlign: "center",
-    fontSize: 40
-  },
   info: {
     display: "inline-flex",
     flexDirection: "column",
@@ -61,7 +54,6 @@ class Menu extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.wrapper}>
-        <h1 className={classes.text}>Wedding Information</h1>
         <div className={classes.info}>
           <h1 className={classes.subText} style={{ textDecoration: "none" }}>
             Dinner

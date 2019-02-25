@@ -7,13 +7,6 @@ const styles = theme => ({
     width: "100%",
     height: "100%"
   },
-  text: {
-    fontFamily: "Alex Brush",
-    margin: 0,
-    paddingTop: 45,
-    textAlign: "center",
-    fontSize: 40
-  },
   textBody: {
     alignSelf: "center"
   },
@@ -52,10 +45,9 @@ class WeddingParty extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.weddingPartyWrapper}>
-        <h1 className={classes.text}>Wedding Information</h1>
+        <h1 className={classes.subText}>Wedding Party</h1>
         <div className={classes.info}>
           <div className={classes.textBody}>
-            <h1 className={classes.subText}>Wedding Party</h1>
             <div className={classes.bride}>
               <h1 className={classes.subTextBody}>Bridesmaid</h1>
               <h2 className={classes.headerSubText}>

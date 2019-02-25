@@ -7,13 +7,6 @@ const styles = theme => ({
     textAlign: "center",
     fontSize: 40
   },
-  text: {
-    fontFamily: "Alex Brush",
-    margin: 0,
-    paddingTop: 45,
-    textAlign: "center",
-    fontSize: 40
-  },
   textHeader: {
     fontFamily: "Alex Brush",
     fontSize: 40,
@@ -60,7 +53,6 @@ class Itinerary extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.wrapper}>
-        <h1 className={classes.text}>Wedding Information</h1>
         <h1 className={classes.textHeader}>Itinerary</h1>
         <h1 className={classes.subtextHeader}>(7:00PM ~ 12:59PM)</h1>
         <div className={classes.textBody}>

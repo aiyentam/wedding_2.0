@@ -7,13 +7,6 @@ const styles = {
     width: "100%",
     height: "100%"
   },
-  text: {
-    fontFamily: "Alex Brush",
-    margin: 0,
-    paddingTop: 45,
-    textAlign: "center",
-    fontSize: 40
-  },
   subText: {
     fontFamily: "Alex Brush",
     marginBottom: 0,
@@ -63,10 +56,9 @@ class Hotel extends Component {
     const ramadaUrl = "https://www.ramadadowntownvancouver.com/";
     return (
       <div className={classes.wrapper}>
-        <h1 className={classes.text}>Wedding Information</h1>
+        <h1 className={classes.subText}>Hotels</h1>
         <div className={classes.info}>
           <div className={classes.textBody}>
-            <h1 className={classes.subText}>Hotels</h1>
             <div className={classes.title}>
               <p style={{ marginTop: 20, marginBottom: 0 }}>
                 <a className={classes.link} href={ywcaUrl}>
