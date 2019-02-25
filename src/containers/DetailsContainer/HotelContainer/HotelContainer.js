@@ -35,7 +35,7 @@ class HotelContainer extends Component {
           "**free continental breakfast**"
         ],
         bed: ["1 Queen $289 CAD/per night", "2 Double $305 CAD/per night"],
-        contact: "Alina Klovskaia | aklovskaia@hotelier.ca | (604) 331 - 1101",
+        contact: "(604) 488 - 1088",
         promo: 'Mention "Ai Yen & Stephen Wedding" for those rates'
       }
     };
