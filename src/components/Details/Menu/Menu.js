@@ -38,7 +38,7 @@ const styles = {
   },
   headerSubText: {
     fontSize: 18,
-    margin: "25px 0",
+    margin: "15px 0",
     letterSpacing: 2
   },
   subParagraph: {
@@ -71,10 +71,7 @@ class Menu extends Component {
                 Gindara Sablefish, Celery Roots & Hearts with Cabbage, Lemon
                 Dressing & Watercress
               </h2>
-              <h2
-                className={classes.headerSubText}
-                style={{ padding: "25px 0" }}
-              >
+              <h2 className={classes.headerSubText}>
                 Beef Tenderloin, Golden Potato Puree, Broccolini, Black Pepper
                 Vinaigrette
               </h2>
