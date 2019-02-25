@@ -17,7 +17,7 @@ const styles = {
   subText: {
     fontFamily: "Alex Brush",
     marginBottom: 0,
-    fontSize: 35,
+    fontSize: 30,
     textDecoration: "overline underline"
   },
   textSubHeader: {
@@ -37,7 +37,7 @@ const styles = {
     margin: "0 35px 0"
   },
   headerSubText: {
-    fontSize: 18,
+    fontSize: 15,
     margin: "15px 0",
     letterSpacing: 2
   },
