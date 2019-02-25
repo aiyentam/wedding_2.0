@@ -17,8 +17,8 @@ const styles = theme => ({
     justifyContent: "flex-end"
   },
   honeymoon: {
-    width: "40%",
-    height: "65%",
+    width: 380,
+    height: 525,
     border: "15px solid #f2cbcb",
     margin: 35,
     background: "rgba(255, 255, 255, 0.8)"
@@ -29,10 +29,9 @@ const styles = theme => ({
     marginBottom: 0
   },
   paragraph: {
-    margin: "0px 60px",
+    margin: "0px 20px",
     fontWeight: "bold",
-    height: 388,
-    paddingTop: "20%"
+    height: 345
   },
   textBody: {
     display: "inline-flex",
@@ -68,7 +67,7 @@ class Registry extends Component {
           <div className={classes.honeymoon}>
             <div className={classes.honeymoonText}>
               <div className={classes.text}>
-                <h1 style={{ marginBottom: 0, fontSize: 70 }}>
+                <h1 style={{ marginBottom: 0, fontSize: 40 }}>
                   Our Honeymoon Fund
                 </h1>
               </div>

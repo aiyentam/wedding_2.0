@@ -37,7 +37,6 @@ class DetailContainer extends Component {
   render() {
     const settings = {
       speed: 500,
-      infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
     };

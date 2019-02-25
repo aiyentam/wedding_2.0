@@ -18,7 +18,6 @@ const styles = theme => ({
     display: "inline-flex",
     flexDirection: "column",
     width: "100%",
-    height: "92%",
     justifyContent: "space-evenly"
   },
   subText: {
@@ -26,27 +25,18 @@ const styles = theme => ({
     marginBottom: 0,
     fontSize: 40
   },
-  textBodyContainer: {
-    height: "100%"
-  },
-  textBody: {
-    height: "30%",
-    margin: 25
-  },
+  textBodyContainer: {},
+  textBody: {},
   headerSubText: {
     fontSize: 18,
     margin: 25
   },
   bride: {
-    paddingLeft: 3,
-    margin: "25px 0 60px 0"
+    margin: "25px 0 30px 0"
   },
-  groom: {
-    paddingLeft: 3
-  },
+  groom: {},
   subTextBody: {
     fontSize: 18,
-    margin: "30px 165px",
     textDecoration: "underline overline"
   }
 });
