@@ -36,7 +36,7 @@ class HotelContainer extends Component {
         ],
         bed: ["1 Queen $289 CAD", "2 Double $305 CAD"],
         contact: "Alina Klovskaia | aklovskaia@hotelier.ca | (604) 331 - 1101",
-        promo: 'Mention "Tam/Wu Wedding" for those rates'
+        promo: 'Mention "Ai Yen & Stephen Wedding" for those rates'
       }
     };
   }
