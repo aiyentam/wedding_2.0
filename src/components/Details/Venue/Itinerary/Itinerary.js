@@ -30,11 +30,7 @@ const styles = theme => ({
     fontSize: 40
   },
   textBody: {
-    display: "inline-flex",
-    flexDirection: "column",
-    textAlign: "center",
-    fontSize: 30,
-    paddingLeft: 70
+    alignSelf: "center"
   },
   ItineraryInfo: {
     textAlign: "left"
@@ -67,7 +63,9 @@ class Itinerary extends Component {
         <h1 className={classes.text}>Wedding Information</h1>
         <h1 className={classes.textHeader}>Itinerary</h1>
         <h1 className={classes.subtextHeader}>(7:00PM ~ 12:59PM)</h1>
-        <h1 className={classes.tba}>TBA</h1>
+        <div className={classes.textBody}>
+          <h1 className={classes.tba}>TBA</h1>
+        </div>
         {/* <div className={classes.textBody}>
           <div className={classes.ItineraryInfo}>
             <h1 className={classes.headerSubText}>
