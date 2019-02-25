@@ -16,19 +16,15 @@ const styles = {
   },
   info: {
     display: "inline-flex",
-    flexDirection: "column"
-  },
-  textHeader: {
-    fontFamily: "Alex Brush",
-    margin: 0,
-    paddingTop: 45,
-    textAlign: "center",
-    fontSize: 40
+    flexDirection: "column",
+    width: "100%",
+    justifyContent: "center",
+    height: 500
   },
   subText: {
     fontFamily: "Alex Brush",
     marginBottom: 0,
-    fontSize: 40,
+    fontSize: 35,
     textDecoration: "overline underline"
   },
   textSubHeader: {
@@ -41,8 +37,7 @@ const styles = {
   },
   textBodyContainer: {
     display: "flex",
-    flexDirection: "column",
-    marginTop: 50
+    flexDirection: "column"
   },
   textBody: {
     fontSize: 30,
