@@ -39,8 +39,7 @@ class DetailContainer extends Component {
       speed: 500,
       infinite: true,
       slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true
+      slidesToScroll: 1
     };
     const { classes } = this.props;
     return (
