@@ -70,17 +70,8 @@ const styles = theme => ({
 });
 
 class HomePage extends Component {
-  scrollPage = divName => {
-    const element = document.getElementById(divName);
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest"
-    });
-  };
-
   render() {
-    const { classes, countDownTimer, addLeadingZeros } = this.props;
+    const { classes, countDownTimer, addLeadingZeros, scrollPage } = this.props;
     return (
       <div className={classes.headerNavContainer}>
         <div className={classes.headerContainer}>
@@ -111,7 +102,7 @@ class HomePage extends Component {
           <h1 className={classes.navTitle}>Navigation</h1>
           <Button
             onClick={() => {
-              this.scrollPage("detailsContainer");
+              scrollPage("detailsContainer");
             }}
             className={classes.navLink}
           >
@@ -120,7 +111,7 @@ class HomePage extends Component {
           <Button
             className={classes.navLink}
             onClick={() => {
-              this.scrollPage("activitiesContainer");
+              scrollPage("activitiesContainer");
             }}
           >
             Activities
@@ -128,7 +119,7 @@ class HomePage extends Component {
           <Button
             className={classes.navLink}
             onClick={() => {
-              this.scrollPage("honeyMoonContainer");
+              scrollPage("honeyMoonContainer");
             }}
           >
             Honeymoon Fund
@@ -136,7 +127,7 @@ class HomePage extends Component {
           <Button
             className={classes.navLink}
             onClick={() => {
-              this.scrollPage("contactContainer");
+              scrollPage("contactContainer");
             }}
           >
             Contact

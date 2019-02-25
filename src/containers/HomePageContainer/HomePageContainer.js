@@ -88,12 +88,13 @@ class HomePageContainer extends Component {
 
   render() {
     const countDownTimer = this.state;
-    const { classes } = this.props;
+    const { classes, scrollPage } = this.props;
     return (
-      <div className={classes.homePageContainer}>
+      <div id="homePageContainer" className={classes.homePageContainer}>
         <HomePage
           countDownTimer={countDownTimer}
           addLeadingZeros={this.addLeadingZeros}
+          scrollPage={scrollPage}
         />
       </div>
     );

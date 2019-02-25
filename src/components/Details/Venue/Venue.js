@@ -46,9 +46,8 @@ const styles = theme => ({
   },
   subTextBody: {
     fontSize: 18,
-    borderBottom: "2px solid black",
-    borderTop: "2px solid black",
-    margin: "30px 165px"
+    margin: "30px 165px",
+    textDecoration: "underline overline"
   }
 });
 

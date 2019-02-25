@@ -18,7 +18,7 @@ const styles = theme => ({
   },
   honeymoon: {
     width: "40%",
-    height: "94%",
+    height: "65%",
     border: "15px solid #f2cbcb",
     margin: 35,
     background: "rgba(255, 255, 255, 0.8)"
@@ -31,26 +31,23 @@ const styles = theme => ({
   paragraph: {
     margin: "0px 60px",
     fontWeight: "bold",
-    height: 420,
+    height: 388,
     paddingTop: "20%"
   },
   textBody: {
     display: "inline-flex",
     flexDirection: "row",
-    justifyContent: "center"
+    justifyContent: "space-evenly",
+    width: "100%"
   },
   subtext: {
     fontSize: 20,
-    margin: 0,
-    fontWeight: "normal",
-    textShadow: "1px 1px #009BE1"
+    marginTop: 0,
+    fontWeight: 500,
+    color: "#3b7bbf"
   },
-  paypal: {
-    marginRight: 5
-  },
-  venmo: {
-    marginLeft: 5
-  },
+  paypal: {},
+  venmo: {},
   subSecText: {
     fontSize: 15,
     marginTop: 0
@@ -71,10 +68,12 @@ class Registry extends Component {
           <div className={classes.honeymoon}>
             <div className={classes.honeymoonText}>
               <div className={classes.text}>
-                <h1 style={{ marginBottom: 0 }}>Our Honeymoon Fund</h1>
+                <h1 style={{ marginBottom: 0, fontSize: 70 }}>
+                  Our Honeymoon Fund
+                </h1>
               </div>
               <div className={classes.paragraph}>
-                <p>
+                <p style={{ letterSpacing: 1 }}>
                   “As we begin our lives together, we are grateful for support
                   from our loved ones. We recognize how lucky we are to be
                   blessed with the necessities of everyday life, and have

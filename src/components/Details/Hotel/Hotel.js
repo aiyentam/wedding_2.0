@@ -32,8 +32,13 @@ const styles = {
   },
   textBody: {
     fontSize: 30,
-
     margin: "35px 0"
+  },
+  title: {},
+  link: {
+    color: "black",
+    textDecoration: "overline underline",
+    fontWeight: "bold"
   },
   headerSubText: {
     fontSize: 18,
@@ -62,7 +67,9 @@ class Hotel extends Component {
             <div className={classes.textBody}>
               <div className={classes.title}>
                 <p>
-                  <a href={ywcaUrl}>{ywca.name}</a>
+                  <a className={classes.link} href={ywcaUrl}>
+                    {ywca.name}
+                  </a>
                 </p>
                 <h1 className={classes.textSubHeader}>{ywca.address}</h1>
               </div>
@@ -92,7 +99,9 @@ class Hotel extends Component {
             <div className={classes.textBody}>
               <div className={classes.title}>
                 <p>
-                  <a href={ramadaUrl}>{ramada.name}</a>
+                  <a className={classes.link} href={ramadaUrl}>
+                    {ramada.name}
+                  </a>
                 </p>
                 <h1 className={classes.textSubHeader}>{ramada.address}</h1>
               </div>

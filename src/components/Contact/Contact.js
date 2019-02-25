@@ -28,12 +28,13 @@ const styles = theme => ({
   headerText: {
     margin: 0,
     fontFamily: "Alex Brush",
-    fontSize: 55
+    fontSize: 55,
+    color: "black"
   },
   subText: {
-    fontSize: 25,
+    fontSize: 15,
     margin: 0,
-    fontWeight: "normal",
+    fontWeight: 500,
     color: "black"
   }
 });

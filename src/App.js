@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { withStyles } from "@material-ui/core";
+import { withStyles, Button } from "@material-ui/core";
+import KeyboardArrowUp from "@material-ui/icons/KeyboardArrowUp";
 import { Parallax } from "react-scroll-parallax";
 import HomePageContainer from "./containers/HomePageContainer/HomePageContainer";
 import DetailContainer from "./containers/DetailsContainer/DetailContainer";
@@ -17,6 +18,20 @@ const styles = theme => ({
   componentWrapper: {
     display: "flex",
     flexDirection: "column"
+  },
+  buttonContainer: {
+    zIndex: 1,
+    position: "fixed",
+    bottom: 5,
+    right: 25,
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end"
+  },
+  button: {
+    "&:hover": {
+      background: "rgba(255,255,255, .7)"
+    }
   }
 });
 
@@ -26,22 +41,45 @@ class App extends Component {
     this.state = {};
   }
 
+  scrollPage = divName => {
+    const element = document.getElementById(divName);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  };
+
   render() {
     const { classes } = this.props;
+
     return (
-      <Parallax
-        style={{ height: "100%", width: "100%" }}
-        className={classes.mainContainer}
-        slowerScrollRate
-      >
-        <div className={classes.componentWrapper}>
-          <HomePageContainer />
-          <DetailContainer />
-          <ActivitiesContainer />
-          <RegistryContainer />
-          <ContactContainer />
+      <div>
+        <div className={classes.buttonContainer}>
+          <Button
+            className={classes.button}
+            style={{ padding: 10, color: "#CF9D81" }}
+            onClick={() => {
+              this.scrollPage("homePageContainer");
+            }}
+          >
+            <KeyboardArrowUp />
+          </Button>
         </div>
-      </Parallax>
+        <Parallax
+          style={{ height: "100%", width: "100%" }}
+          className={classes.mainContainer}
+          slowerScrollRate
+        >
+          <div className={classes.componentWrapper}>
+            <HomePageContainer scrollPage={this.scrollPage} />
+            <DetailContainer />
+            <ActivitiesContainer />
+            <RegistryContainer />
+            <ContactContainer />
+          </div>
+        </Parallax>
+      </div>
     );
   }
 }

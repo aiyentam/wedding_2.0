@@ -28,7 +28,8 @@ const styles = {
   subText: {
     fontFamily: "Alex Brush",
     marginBottom: 0,
-    fontSize: 40
+    fontSize: 40,
+    textDecoration: "overline underline"
   },
   textSubHeader: {
     fontSize: 15
@@ -39,11 +40,13 @@ const styles = {
     flexDirection: "column"
   },
   textBodyContainer: {
-    margin: "0px 25px"
+    display: "flex",
+    flexDirection: "column",
+    marginTop: 50
   },
   textBody: {
     fontSize: 30,
-    margin: "35px 0"
+    margin: "0 35px 0"
   },
   headerSubText: {
     fontSize: 18,
@@ -65,29 +68,39 @@ class Menu extends Component {
       <div className={classes.wrapper}>
         <h1 className={classes.text}>Wedding Information</h1>
         <div className={classes.info}>
-          <div className={classes.textBody}>
-            <h1 className={classes.subText}>Starter</h1>
-            <h2 className={classes.headerSubText}>
-              Parsnip & Celery Root, Maple Black Pepper Glaze
-            </h2>
-          </div>
-          <div className={classes.textBody}>
-            <h1 className={classes.subText}>Entrées</h1>
-            <h2 className={classes.headerSubText}>
-              Gindara Sablefish, Celery Roots & Hearts with Cabbage, Lemon
-              Dressing & Watercress
-            </h2>
-            <h2 className={classes.headerSubText} style={{ padding: "25px 0" }}>
-              Beef Tenderloin, Golden Potato Puree, Broccolini, Black Pepper
-              Vinaigrette
-            </h2>
-            <h2 className={classes.headerSubText}>Corn Polenta Ratatouille</h2>
-          </div>
-          <div className={classes.textBody}>
-            <h1 className={classes.subText}>Dessert</h1>
-            <h2 className={classes.headerSubText}>
-              Cheese Cake with Brown Butter Caramel
-            </h2>
+          <h1 className={classes.subText} style={{ textDecoration: "none" }}>
+            Dinner
+          </h1>
+          <div className={classes.textBodyContainer}>
+            <div className={classes.textBody}>
+              <h1 className={classes.subText}>Starter</h1>
+              <h2 className={classes.headerSubText}>
+                Parsnip & Celery Root, Maple Black Pepper Glaze
+              </h2>
+            </div>
+            <div className={classes.textBody}>
+              <h1 className={classes.subText}>Entrées</h1>
+              <h2 className={classes.headerSubText}>
+                Gindara Sablefish, Celery Roots & Hearts with Cabbage, Lemon
+                Dressing & Watercress
+              </h2>
+              <h2
+                className={classes.headerSubText}
+                style={{ padding: "25px 0" }}
+              >
+                Beef Tenderloin, Golden Potato Puree, Broccolini, Black Pepper
+                Vinaigrette
+              </h2>
+              <h2 className={classes.headerSubText}>
+                Corn Polenta Ratatouille
+              </h2>
+            </div>
+            <div className={classes.textBody}>
+              <h1 className={classes.subText}>Dessert</h1>
+              <h2 className={classes.headerSubText}>
+                Cheese Cake with Brown Butter Caramel
+              </h2>
+            </div>
           </div>
         </div>
       </div>
