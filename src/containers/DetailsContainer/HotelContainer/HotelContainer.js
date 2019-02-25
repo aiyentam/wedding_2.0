@@ -22,7 +22,7 @@ class HotelContainer extends Component {
         ],
         bed: [
           "One double bed w/ private bath $199 CAD/per night",
-          "Two double bed w/ private bath $215 CAD / per night"
+          "Two double bed w/ private bath $215 CAD/per night"
         ],
         contact: "Karen Newell | knewell@ywcavan.org | (604) 895 - 5840",
         promo: 'Mention "Tam/Wu Wedding" for those rates'
@@ -34,7 +34,7 @@ class HotelContainer extends Component {
           "*cancellation 45 days prior to booking*",
           "**free continental breakfast**"
         ],
-        bed: ["1 Queen $289 CAD", "2 Double $305 CAD"],
+        bed: ["1 Queen $289 CAD/per night", "2 Double $305 CAD/per night"],
         contact: "Alina Klovskaia | aklovskaia@hotelier.ca | (604) 331 - 1101",
         promo: 'Mention "Ai Yen & Stephen Wedding" for those rates'
       }
