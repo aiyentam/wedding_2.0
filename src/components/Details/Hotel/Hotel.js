@@ -10,10 +10,11 @@ const styles = {
   subText: {
     fontFamily: "Alex Brush",
     marginBottom: 0,
-    fontSize: 40
+    fontSize: 35
   },
   textSubHeader: {
-    fontSize: 15
+    fontSize: 15,
+    marginTop: 5
   },
   info: {
     display: "inline-flex",
@@ -31,8 +32,15 @@ const styles = {
   title: {
     fontSize: 20
   },
+  hotelName: {
+    marginTop: 15,
+    marginBottom: 0,
+    "&:hover": {
+      background: "antiquewhite"
+    }
+  },
   link: {
-    color: "black",
+    color: "salmon",
     textDecoration: "overline underline",
     fontWeight: "bold"
   },
@@ -60,7 +68,7 @@ class Hotel extends Component {
         <div className={classes.info}>
           <div className={classes.textBody}>
             <div className={classes.title}>
-              <p style={{ marginTop: 20, marginBottom: 0 }}>
+              <p className={classes.hotelName}>
                 <a className={classes.link} href={ywcaUrl}>
                   {ywca.name}
                 </a>
@@ -69,7 +77,9 @@ class Hotel extends Component {
             </div>
             <h1 className={classes.textSubHeader}>06/27/2019 - 07/01/2019</h1>
             <h3 className={classes.subParagraph}>{ywca.info[0]}</h3>
-            <h3 className={classes.subParagraph}>{ywca.info[1]}</h3>
+            <h3 className={classes.subParagraph} style={{ marginBottom: 5 }}>
+              {ywca.info[1]}
+            </h3>
             <div className={classes.textBody}>
               <h2 className={classes.headerSubText}>{ywca.bed[0]}</h2>
               <h2 className={classes.headerSubText}>{ywca.bed[1]}</h2>
@@ -92,7 +102,7 @@ class Hotel extends Component {
           </div>
           <div className={classes.textBody}>
             <div className={classes.title}>
-              <p style={{ marginTop: 20, marginBottom: 0 }}>
+              <p className={classes.hotelName}>
                 <a className={classes.link} href={ramadaUrl}>
                   {ramada.name}
                 </a>
